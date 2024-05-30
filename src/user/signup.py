@@ -1,12 +1,12 @@
-import schemas
-import models
-from models import User
-from database import Base, engine, SessionLocal
+import database.schemas as schemas
+import database.models as models
+from database.models import User
+from database.database import Base, engine, SessionLocal
 from fastapi import FastAPI, Depends, HTTPException,status
 from sqlalchemy.orm import Session
 from sqlalchemy import func
 import bcrypt
-import database
+import database.database as database
 from fastapi import APIRouter
 
 app = FastAPI()
