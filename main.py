@@ -4,6 +4,10 @@ from fastapi import FastAPI
 
 from src.user.signup import router as user_router
 
+from dotenv import load_dotenv 
+
+load_dotenv() 
+
 app = FastAPI()
 
 app.include_router(user_router)
